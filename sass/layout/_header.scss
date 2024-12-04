@@ -1,0 +1,29 @@
+.header__container{
+    display: flex;
+    padding: 20px 50px !important;
+    align-items: center;
+    .header__inner{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .logo-link{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            height: 32px;
+        }
+        .header__menu{
+            display: flex;
+            font-family: $mainFont;
+            color: $text-main-color;
+            gap: 10px;
+            .header__menu-item{
+                padding: 12px 20px;
+                cursor: pointer;
+                &:hover{
+                    color: $callToAction;
+                }
+            }
+        }
+    }
+}

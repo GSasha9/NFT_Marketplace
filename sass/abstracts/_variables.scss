@@ -7,8 +7,7 @@ $mobile: 375px;
 /* FONTS */
 @font-face {
     font-family: 'Work Sans';
-    src: url('../../assets/fonts/Work_Sans/WorkSans-Italic-VariableFont_wght.ttf'),
-    url('../../assets/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf');
+    src: url('../../assets/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf');
     font-weight: 400;
     font-style: normal;
 }
@@ -16,8 +15,8 @@ $mobile: 375px;
 @font-face {
     font-family: 'Space Mono';
     src: url('../../assets/fonts/Space_Mono/SpaceMono-Regular.ttf');
-    font-weight: normal;
-    font-style: 400;
+    font-weight: 400;
+    font-style: normal;
 }
 
 $mainFont: 'Work Sans', Arial, sans-serif;
@@ -27,7 +26,20 @@ $decorFont: 'Space Mono', Arial, sans-serif;
 
 $background: #2B2B2B;
 $background-secondary: #3B3B3B;
-$text-main: #FFFFFF;
-$text-aditional: #CCCCCC;
+$text-main-color: #FFFFFF;
+$text-aditional-color: #CCCCCC;
 $callToAction: #A259FF;
 $callToAction-gradient: linear-gradient(180deg, rgba(255,255,255) 0%, rgba(162,89,255,1) 100%);
+
+
+/* BUTTONS */
+%buttons{
+    padding: 19px 50px;
+    background-color: $callToAction;
+    font-weight: 600;
+    color: $text-main-color;
+    border-radius: 20px;
+    &:hover{
+        background: darken($callToAction,10%);
+    }
+}

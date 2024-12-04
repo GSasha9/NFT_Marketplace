@@ -11,6 +11,15 @@
 	box-sizing: border-box;
 }
 
+
+* ,
+*::before,
+*::after,
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Links */
 
 a, a:link, a:visited  {

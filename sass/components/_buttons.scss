@@ -1,0 +1,9 @@
+
+.button-link{
+    @extend %buttons;
+}
+
+.button-link-header{
+    @extend %buttons;
+    padding: 19px 30px;
+}
