@@ -1,5 +1,6 @@
 .hero__inner{
     @include inner(1050px);
+    gap: 30px;
     .hero__text{
         @include inner(inherit);
         flex-direction: column;
@@ -12,14 +13,49 @@
     }
 }
 
-.hero__text-title{
-    @include inner(inherit);
+.hero__text{
+    .hero__text-title{
+        @include inner(inherit);
+        flex-direction: column;
+        gap: 20px;
+        .title__1{
+            @include getText(4.2rem, 4.6rem, 600);
+        }
+    }
+    .hero__list{
+        @include inner;
+        gap: 30px;
+        .hero__list-item{
+            @include inner(150px);
+            flex-direction: column;
+            .list-item-number{
+                @include getTextDecor(1.75rem, 2.45rem);
+            }
+        }
+    }
+}
+
+.hero__album{
+    @include inner;
     flex-direction: column;
-    gap: 20px;
-    .title__1{
-        @include getText(4.2rem, 4.6rem, 600);
+    .hero__album-img{
+        @include getImage(510px, 400px, url(../../assets/img/hero.jpg))
     }
-    .text-description{
-        @include getText(1.4rem, 2.2rem, 400);
+    .hero__album-text{
+        background-color: $background-secondary;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        padding: 20px;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        .animakid{
+            background: url(../../assets/img/animakid.png);
+        }
     }
+}
+
+.album-text-author{
+    display: flex;
+    gap: 12px;
 }

@@ -13,6 +13,13 @@
     font-weight: $weight;
 }
 
+@mixin getTextDecor($size, $line-height, $weight:700){
+    @extend %decor-text;
+    font-size: $size;
+    line-height: $line-height;
+    font-weight: $weight;
+}
+
 /* BUTTONS */
 @mixin getButton($url: '', $padding: 19px 50px){
     @extend %buttons;
@@ -20,5 +27,13 @@
     &::before{
         content: $url;
     }
+}
+
+/* IMAGES */
+@mixin getImage($maxWidth, $maxHeigth, $url){
+    @extend %image;
+    max-width: $maxWidth;
+    max-height: $maxHeigth;
+    background-image: $url;;
 }
 

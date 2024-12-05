@@ -24,3 +24,20 @@
     font-family: $mainFont;
     color: $text-main-color;
 }
+
+%decor-text{
+    font-family: $decorFont;
+    color: $text-main-color;
+}
+
+/* IMAGES */
+%image{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
