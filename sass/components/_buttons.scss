@@ -1,9 +1,12 @@
 
 .button-link{
-    @extend %buttons;
+    @include getButton;
 }
 
 .button-link-header{
-    @extend %buttons;
-    padding: 19px 30px;
+    @include getButton(url(../../assets/img/User.png), 19px 30px);
+}
+
+.button-rocket{
+    @include getButton(url(../../assets/img/RocketLaunch.png));
 }

@@ -22,6 +22,8 @@ $mobile: 375px;
 $mainFont: 'Work Sans', Arial, sans-serif;
 $decorFont: 'Space Mono', Arial, sans-serif;
 
+
+
 /* COLORS */
 
 $background: #2B2B2B;
@@ -32,14 +34,3 @@ $callToAction: #A259FF;
 $callToAction-gradient: linear-gradient(180deg, rgba(255,255,255) 0%, rgba(162,89,255,1) 100%);
 
 
-/* BUTTONS */
-%buttons{
-    padding: 19px 50px;
-    background-color: $callToAction;
-    font-weight: 600;
-    color: $text-main-color;
-    border-radius: 20px;
-    &:hover{
-        background: darken($callToAction,10%);
-    }
-}

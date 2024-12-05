@@ -1,0 +1,24 @@
+/* LAYOUTS */
+@mixin inner($maxwidth: 1280px){
+    width: 100%;
+    display: flex;
+    max-width: $maxwidth;
+}
+
+/* FONTS */
+@mixin getText($size, $line-height, $weight){
+    @extend %main-text;
+    font-size: $size;
+    line-height: $line-height;
+    font-weight: $weight;
+}
+
+/* BUTTONS */
+@mixin getButton($url: '', $padding: 19px 50px){
+    @extend %buttons;
+    padding: $padding;
+    &::before{
+        content: $url;
+    }
+}
+

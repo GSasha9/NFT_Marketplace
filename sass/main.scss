@@ -1,8 +1,11 @@
 @import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/placeholders';
 //@import 'vendors';
 @import 'base/reset';
 @import 'layout/wrapper';
 @import 'layout/header';
+@import 'layout/hero';
 @import 'components/buttons';
 //@import 'pages';
 //@import 'themes';

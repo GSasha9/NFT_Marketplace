@@ -3,25 +3,39 @@
     padding: 20px 50px !important;
     align-items: center;
     .header__inner{
-        width: 100%;
-        display: flex;
+        @include inner;
         justify-content: space-between;
-        .logo-link{
+        .logo{
             display: flex;
+            padding: 19px 0px;
             align-items: center;
-            gap: 12px;
-            height: 32px;
+            max-width: 247px;
+            .logo-link{
+                display: flex;
+                gap: 12px;
+                height: 32px;
+                align-items: center;
+                .logo-text{
+                    max-height: 19.8px;
+                }
+            }
         }
         .header__menu{
             display: flex;
             font-family: $mainFont;
             color: $text-main-color;
-            gap: 10px;
+            gap: 14px;
+            align-items: center;
             .header__menu-item{
-                padding: 12px 20px;
+                padding-right:20px;
                 cursor: pointer;
+                line-height: 22.4px;
+                font-weight: 600;
                 &:hover{
                     color: $callToAction;
+                }
+                &:last-of-type{
+                    padding-right: 0px;
                 }
             }
         }
