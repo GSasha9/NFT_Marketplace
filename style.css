@@ -24,7 +24,7 @@
   font-weight: 600;
   color: #FFFFFF;
   border-radius: 20px;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0rem;
   line-height: 22.4px;
   display: flex;
 }
@@ -39,7 +39,7 @@
 }
 
 /* FONTS */
-.author-name, .album-title, .text-description, .hero__text .hero__text-title .title__1 {
+.title__3, .text-description, .hero__text .hero__text-title .title__1, .album-text-author .author-name, .album-title {
   font-family: "Work Sans", Arial, sans-serif;
   color: #FFFFFF;
 }
@@ -50,11 +50,12 @@
 }
 
 /* IMAGES */
-.author-pic, .hero__album .hero__album-img {
+.collection__tables .collection__table-item .table-image:first-of-type, .collection__tables .collection__table-item .table-image, .hero__album .hero__album-img, .album-text-author .author-pic, .album .album-img {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
   border-top-left-radius: 20px;
@@ -191,7 +192,7 @@ body {
 }
 .header__container .header__inner .logo {
   display: flex;
-  padding: 19px 0px;
+  padding: 15px 0px;
   align-items: center;
   max-width: 247px;
 }
@@ -204,26 +205,119 @@ body {
 .header__container .header__inner .logo .logo-link .logo-text {
   max-height: 19.8px;
 }
-.header__container .header__inner .header__menu {
+.header__container .header__inner .header__navigation {
+  max-width: 607px;
+  width: 100%;
+}
+.header__container .header__inner .header__navigation .header__menu {
   display: flex;
   font-family: "Work Sans", Arial, sans-serif;
   color: #FFFFFF;
-  gap: 14px;
   align-items: center;
+  justify-content: space-between;
 }
-.header__container .header__inner .header__menu .header__menu-item {
-  padding-right: 20px;
+.header__container .header__inner .header__navigation .header__menu .header__menu-item {
+  padding-left: 20px;
   cursor: pointer;
-  line-height: 22.4px;
   font-weight: 600;
 }
-.header__container .header__inner .header__menu .header__menu-item:hover {
+.header__container .header__inner .header__navigation .header__menu .header__menu-item:hover {
   color: #A259FF;
 }
-.header__container .header__inner .header__menu .header__menu-item:last-of-type {
+.header__container .header__inner .header__navigation .header__menu .header__menu-item:last-of-type {
   padding-right: 0px;
 }
+.header__container .header__inner .header__navigation .header__menu .header__menu-item .header__menu-link {
+  letter-spacing: 0.03rem;
+  line-height: 22.4px;
+}
 
+.button-link {
+  padding: 19px 50px;
+}
+.button-link::before {
+  content: "";
+}
+
+.button-link-header {
+  padding: 19px 30px;
+}
+.button-link-header::before {
+  content: url(../../assets/img/User.png);
+}
+
+.button-rocket {
+  padding: 19px 50px;
+}
+.button-rocket::before {
+  content: url(../../assets/img/RocketLaunch.png);
+}
+
+.album {
+  width: 100%;
+  display: flex;
+  max-width: 1280px;
+  flex-direction: column;
+}
+.album .album-img {
+  max-width: 330px;
+  max-height: 296px;
+  background-image: url(../../assets/img/hero.jpg);
+}
+.album .album-text {
+  background-color: #3B3B3B;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.album:hover {
+  cursor: pointer;
+  animation-name: heartbit;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+.album:hover .album-title {
+  color: #A259FF;
+}
+
+.album-title {
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  font-weight: 600;
+}
+
+.album-text-author {
+  display: flex;
+  gap: 12px;
+}
+.album-text-author .author-pic {
+  max-width: 24px;
+  max-height: 24px;
+  background-image: url(../../assets/img/hero.jpg);
+  border-radius: 50%;
+  height: 24px;
+}
+.album-text-author .author-name {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  font-weight: 400;
+}
+
+@keyframes heartbit {
+  0% {
+    transform: rotate(0.2deg);
+  }
+  50% {
+    transform: rotate(-0.2deg);
+  }
+  100% {
+    transform: rotate(0.2deg);
+  }
+}
+/*! HERO */
 .hero__inner {
   width: 100%;
   display: flex;
@@ -235,7 +329,7 @@ body {
   display: flex;
   max-width: inherit;
   flex-direction: column;
-  width: 50%;
+  width: 49%;
   gap: 30px;
   align-items: flex-start;
 }
@@ -273,79 +367,82 @@ body {
   font-weight: 700;
 }
 
-.hero__album {
-  width: 100%;
-  display: flex;
-  max-width: 1280px;
-  flex-direction: column;
-}
-.hero__album .hero__album-img {
-  max-width: 510px;
-  max-height: 400px;
-  background-image: url(../../assets/img/hero.jpg);
-}
-.hero__album .hero__album-text {
-  background-color: #3B3B3B;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  padding: 20px;
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-}
-.hero__album .hero__album-text .animakid {
-  background: url(../../assets/img/animakid.png);
-}
-
-.album-text-author {
-  display: flex;
-  gap: 12px;
-}
-
-.button-link {
-  padding: 19px 50px;
-}
-.button-link::before {
-  content: "";
-}
-
-.button-link-header {
-  padding: 19px 30px;
-}
-.button-link-header::before {
-  content: url(../../assets/img/User.png);
-}
-
-.button-rocket {
-  padding: 19px 50px;
-}
-.button-rocket::before {
-  content: url(../../assets/img/RocketLaunch.png);
-}
-
 .text-description {
   font-size: 1.4rem;
   line-height: 2.2rem;
   font-weight: 400;
 }
 
-.album-title {
-  font-size: 1.4rem;
-  line-height: 1.9rem;
+.hero__album .hero__album-img {
+  max-width: 510px;
+  max-height: 401px;
+  background-image: url(../../assets/img/hero.jpg) !important;
+}
+.hero__album .animakid {
+  background: url(../../assets/img/animakid.png);
+}
+
+/*! ------ */
+/*! COLLECTION */
+.collection__inner {
+  width: 100%;
+  display: flex;
+  max-width: 1050px;
+  flex-direction: column;
+  gap: 3.75rem;
+}
+.collection__inner .collection__title {
+  width: 100%;
+  display: flex;
+  max-width: inherit;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title__3 {
+  font-size: 2.4rem;
+  line-height: 2.9rem;
   font-weight: 600;
 }
 
-.author-name {
-  font-size: 1rem;
-  line-height: 1.4rem;
-  font-weight: 400;
+.collection__tables {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+  width: 100%;
+}
+.collection__tables .collection__table-item {
+  height: 525px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 100px 65px;
+  gap: 15px;
+}
+.collection__tables .collection__table-item .table-image {
+  max-width: 510px;
+  max-height: 401px;
+  background-image: url(../../assets/img/hero.jpg);
+  height: 100%;
+  width: 100%;
+  max-height: 100px;
+  border-radius: 20px !important;
+}
+.collection__tables .collection__table-item .table-image:first-of-type {
+  grid-column: 1/4;
+  max-width: 510px;
+  max-height: 401px;
+  background-image: url(../../assets/img/hero.jpg);
+  height: 100%;
+  width: 100%;
+  max-height: 330px;
+}
+.collection__tables .collection__table-item .album-text {
+  grid-column: 1/4;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.author-pic {
-  max-width: 24px;
-  max-height: 24px;
-  background-image: url(../../assets/img/hero.jpg);
-  border-radius: 50%;
-}
+/*! ------ */
 
 /*# sourceMappingURL=style.css.map */

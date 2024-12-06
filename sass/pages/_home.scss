@@ -1,0 +1,106 @@
+/*! HERO */
+
+.hero__inner{
+    @include inner(1050px);
+    gap: 30px;
+    .hero__text{
+        @include inner(inherit);
+        flex-direction: column;
+        width: 49%;
+        gap: 30px;
+        align-items: flex-start;
+    }
+    .hero__album{
+        width: 50%;
+    }
+}
+
+.hero__text{
+    .hero__text-title{
+        @include inner(inherit);
+        flex-direction: column;
+        gap: 20px;
+        .title__1{
+            @include getText(4.2rem, 4.6rem, 600);
+        }
+    }
+    .hero__list{
+        @include inner;
+        gap: 30px;
+        .hero__list-item{
+            @include inner(150px);
+            flex-direction: column;
+            .list-item-number{
+                @include getTextDecor(1.75rem, 2.45rem);
+            }
+        }
+    }
+}
+
+.text-description{
+    @include getText(1.4rem, 2.2rem, 400);
+}
+
+.hero__album{
+    .hero__album-img{
+        @include getImage(510px, 401px, url(../../assets/img/hero.jpg) !important);
+    }
+    .animakid{
+        background: url(../../assets/img/animakid.png);
+    }
+}
+
+
+/*! ------ */
+
+/*! COLLECTION */
+
+.collection__inner{
+    @include inner(1050px);
+    flex-direction: column;
+    gap: 3.75rem;
+    .collection__title{
+        @include inner(inherit);
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.title__3{
+    @include getText(2.4rem, 2.9rem, 600);
+}
+
+.collection__tables{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    width: 100%;
+    .collection__table-item{
+        height: 525px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 100px 65px;
+        gap: 15px;
+        .table-image{
+            @include getImage(510px, 401px, url(../../assets/img/hero.jpg));
+            height: 100%;
+            width: 100%;
+            max-height: 100px;
+            border-radius: 20px !important;
+        }
+        .table-image:first-of-type{
+            grid-column: 1 / 4;
+            @include getImage(510px, 401px, url(../../assets/img/hero.jpg));
+            height: 100%;
+            width: 100%;
+            max-height: 330px;
+        }
+        .album-text{
+            grid-column: 1 / 4;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+}
+/*! ------ */

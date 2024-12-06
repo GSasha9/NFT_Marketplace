@@ -1,0 +1,54 @@
+.album{
+    @include inner;
+    flex-direction: column;
+    .album-img{
+        @include getImage(330px, 296px, url(../../assets/img/hero.jpg));
+    }
+    .album-text{
+        background-color: $background-secondary;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        padding: 20px;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+    }
+    &:hover{
+        cursor: pointer;
+        .album-title{
+            color: $callToAction;
+        }
+        animation-name: heartbit;
+        animation-duration: .5s;
+        animation-iteration-count: infinite;
+    }
+}
+
+.album-title{
+    @include getText(1.4rem, 1.9rem, 600);
+}
+
+.album-text-author{
+    display: flex;
+    gap: 12px;
+    .author-pic{
+        @include getImage(24px, 24px, url(../../assets/img/hero.jpg));
+        border-radius: 50%;
+        height: 24px;
+    }
+    .author-name{
+        @include getText(1rem, 1.4rem, 400);
+    }
+}
+
+@keyframes heartbit {
+    0%{
+        transform: rotate(.2deg);
+    }
+    50%{
+        transform: rotate(-.2deg);
+    }
+    100%{
+        transform: rotate(.2deg);
+    }
+}
