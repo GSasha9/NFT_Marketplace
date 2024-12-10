@@ -10,3 +10,7 @@
 .button-rocket{
     @include getButton(url(../../assets/img/RocketLaunch.png));
 }
+
+.button-rocket-purple{
+    @include getButton(url(../../assets/img/RocketLaunch-purple.png));
+}

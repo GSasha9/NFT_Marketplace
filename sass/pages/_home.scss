@@ -1,7 +1,7 @@
 /*! HERO */
 
 .hero__inner{
-    @include inner(1050px);
+    flex-direction: row !important;
     gap: 30px;
     .hero__text{
         @include inner(inherit);
@@ -26,7 +26,7 @@
     }
     .hero__list{
         @include inner;
-        gap: 30px;
+        gap: 40px;
         .hero__list-item{
             @include inner(150px);
             flex-direction: column;
@@ -56,9 +56,7 @@
 /*! COLLECTION */
 
 .collection__inner{
-    @include inner(1050px);
-    flex-direction: column;
-    gap: 3.75rem;
+    gap: 3.75rem !important;
     .collection__title{
         @include inner(inherit);
         flex-direction: column;
@@ -103,4 +101,87 @@
         }
     }
 }
+
 /*! ------ */
+
+/*! CREATORS */
+
+.creator__inner{
+    .creator__text{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .creator__text-title{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .creator-button{
+            align-self: flex-end;
+            background: transparent;
+            border: 2px solid $callToAction;
+            &:hover{
+                background-color: rgb(26, 26, 26);
+            }
+        }
+    }
+
+    .creator__table{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 30px;
+        .creator__table-item{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: relative;
+            padding: 20px;
+            background-color: $background-secondary;
+            border-radius: 20px;
+            max-width: 240px;
+            max-height: 238px;
+            .table-item-number{
+                position: absolute;
+                background-color: $background;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: $decorFont;
+                color: $text-aditional-dark-color;
+            }
+            .creator__table-img{
+                height: 120px;
+                width: 100%;
+                background-image: url(./../../assets/img/avatar_placeholder.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+        }
+    }
+}
+
+.creator__table-description{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    .creator__table-description-name{
+        grid-column: 1 / 3;
+        text-align: center;
+    }
+    .creator__table-description-sales{
+        @include getText(1rem, 1.4rem, 400);
+        color: $text-aditional-dark-color;
+    }
+    .creator__table-description-amount{
+        @include getTextDecor(1rem, 1.4rem, 400);
+    }
+}
+
+.title__5{
+    @include getText(1.38rem, 1.92rem, 600);
+}

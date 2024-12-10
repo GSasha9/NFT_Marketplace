@@ -14,5 +14,10 @@ body{
         margin: 0 auto;
         align-items: center;
         padding: 80px 115px;
+        .inner{
+            @include inner(1050px);
+            gap: 3vw;
+            flex-direction: column;
+        }
     }
 }
