@@ -43,10 +43,10 @@
 
 .hero__album{
     .hero__album-img{
-        @include getImage(510px, 401px, url(../../assets/img/hero.jpg) !important);
+        @include getImage(510px, 401px, url(.../../assets/img/albums/hero.jpg) !important);
     }
     .animakid{
-        background: url(../../assets/img/animakid.png);
+        background-image: url('.../../assets/img/creators/Artist Avatar (5).png');
     }
 }
 
@@ -80,7 +80,7 @@
         grid-template-rows: 1fr 100px 65px;
         gap: 15px;
         .table-image{
-            @include getImage(510px, 401px, url(../../assets/img/hero.jpg));
+            @include getImage(510px, 401px, url(.../../assets/img/albums/hero.jpg));
             height: 100%;
             width: 100%;
             max-height: 100px;
@@ -88,7 +88,7 @@
         }
         .table-image:first-of-type{
             grid-column: 1 / 4;
-            @include getImage(510px, 401px, url(../../assets/img/hero.jpg));
+            @include getImage(510px, 401px, url(.../../assets/img/albums/hero.jpg));
             height: 100%;
             width: 100%;
             max-height: 330px;
@@ -156,7 +156,7 @@
             .creator__table-img{
                 height: 120px;
                 width: 100%;
-                background-image: url(./../../assets/img/avatar_placeholder.png);
+                background-image: url('.../../assets/img/creators/Artist Avatar (1).png');
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: contain;
