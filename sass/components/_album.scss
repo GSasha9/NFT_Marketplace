@@ -2,7 +2,7 @@
     @include inner;
     flex-direction: column;
     .album-img{
-        @include getImage(330px, 296px, url(./../assets/img/albums/hero.jpg));
+        @include getImage(330px, 296px, url(.../../assets/img/albums/hero.jpg));
     }
     .album-text{
         background-color: $background-secondary;
@@ -32,7 +32,7 @@
     display: flex;
     gap: 12px;
     .author-pic{
-        @include getImage(24px, 24px, url(./../assets/img/albums/hero.jpg));
+        @include getImage(24px, 24px, url(.../../assets/img/albums/hero.jpg));
         border-radius: 50%;
         height: 24px;
     }

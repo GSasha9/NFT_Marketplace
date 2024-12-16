@@ -249,21 +249,21 @@ body {
   padding: 19px 30px;
 }
 .button-link-header::before {
-  content: url(./../assets/img/User.png);
+  content: url(.../../assets/img/User.png);
 }
 
 .button-rocket {
   padding: 19px 50px;
 }
 .button-rocket::before {
-  content: url(./../assets/img/RocketLaunch.png);
+  content: url(.../../assets/img/RocketLaunch.png);
 }
 
 .button-rocket-purple {
   padding: 19px 50px;
 }
 .button-rocket-purple::before {
-  content: url(./../assets/img/RocketLaunch-purple.png);
+  content: url(.../../assets/img/RocketLaunch-purple.png);
 }
 
 .album {
@@ -275,7 +275,7 @@ body {
 .album .album-img {
   max-width: 330px;
   max-height: 296px;
-  background-image: url('./../assets/img/albums/hero.jpg');
+  background-image: url(.../../assets/img/albums/hero.jpg);
 }
 .album .album-text {
   background-color: #3B3B3B;
@@ -309,7 +309,7 @@ body {
 .album-text-author .author-pic {
   max-width: 24px;
   max-height: 24px;
-  background-image: url('./../assets/img/albums/hero.jpg');
+  background-image: url(.../../assets/img/albums/hero.jpg);
   border-radius: 50%;
   height: 24px;
 }
@@ -387,10 +387,10 @@ body {
 .hero__album .hero__album-img {
   max-width: 510px;
   max-height: 401px;
-  background-image: url('./../assets/img/albums/hero.jpg') !important;
+  background-image: url(.../../assets/img/albums/hero.jpg) !important;
 }
 .hero__album .animakid {
-  background-image: url("./../assets/img/creators/Artist Avatar (5).png");
+  background-image: url(".../../assets/img/creators/Artist Avatar (5).png");
 }
 
 /*! ------ */
@@ -428,7 +428,7 @@ body {
 .collection__tables .collection__table-item .table-image {
   max-width: 510px;
   max-height: 401px;
-  background-image: url('./../assets/img/albums/hero.jpg');
+  background-image: url(.../../assets/img/albums/hero.jpg);
   height: 100%;
   width: 100%;
   max-height: 100px;
@@ -438,7 +438,7 @@ body {
   grid-column: 1/4;
   max-width: 510px;
   max-height: 401px;
-  background-image: url('./../assets/img/albums/hero.jpg');
+  background-image: url(.../../assets/img/albums/hero.jpg);
   height: 100%;
   width: 100%;
   max-height: 330px;
@@ -502,7 +502,7 @@ body {
 .creator__inner .creator__table .creator__table-item .creator__table-img {
   height: 120px;
   width: 100%;
-  background-image: url("./../assets/img/creators/Artist Avatar (1).png");
+  background-image: url(".../../assets/img/creators/Artist Avatar (1).png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
