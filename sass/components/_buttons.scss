@@ -4,13 +4,13 @@
 }
 
 .button-link-header{
-    @include getButton(url(../../assets/img/User.png), 19px 30px);
+    @include getButton(url(./../assets/img/User.png), 19px 30px);
 }
 
 .button-rocket{
-    @include getButton(url(../../assets/img/RocketLaunch.png));
+    @include getButton(url(./../assets/img/RocketLaunch.png));
 }
 
 .button-rocket-purple{
-    @include getButton(url(../../assets/img/RocketLaunch-purple.png));
+    @include getButton(url(./../assets/img/RocketLaunch-purple.png));
 }
