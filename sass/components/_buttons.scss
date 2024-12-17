@@ -1,16 +1,20 @@
 
-.button-link{
+.button-link {
     @include getButton;
 }
 
-.button-link-header{
+.button-link-header {
     @include getButton(url(.../../assets/img/User.png), 19px 30px);
 }
 
-.button-rocket{
+.button-rocket {
     @include getButton(url(.../../assets/img/RocketLaunch.png));
 }
 
-.button-rocket-purple{
+.button-rocket-purple {
     @include getButton(url(.../../assets/img/RocketLaunch-purple.png));
+}
+
+.button-eye {
+    @include getButton(url(.../../assets/img/Eye.png));
 }

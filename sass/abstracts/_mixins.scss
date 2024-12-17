@@ -1,19 +1,19 @@
 /* LAYOUTS */
-@mixin inner($maxwidth: 1280px){
+@mixin inner($maxwidth: 1280px) {
     width: 100%;
     display: flex;
     max-width: $maxwidth;
 }
 
 /* FONTS */
-@mixin getText($size, $line-height, $weight){
+@mixin getText($size, $line-height, $weight) {
     @extend %main-text;
     font-size: $size;
     line-height: $line-height;
     font-weight: $weight;
 }
 
-@mixin getTextDecor($size, $line-height, $weight:700){
+@mixin getTextDecor($size, $line-height, $weight:700) {
     @extend %decor-text;
     font-size: $size;
     line-height: $line-height;
@@ -21,7 +21,7 @@
 }
 
 /* BUTTONS */
-@mixin getButton($url: '', $padding: 19px 50px){
+@mixin getButton($url: '', $padding: 19px 50px) {
     @extend %buttons;
     padding: $padding;
     &::before{
@@ -30,7 +30,7 @@
 }
 
 /* IMAGES */
-@mixin getImage($maxWidth, $maxHeigth, $url){
+@mixin getImage($maxWidth, $maxHeigth, $url) {
     @extend %image;
     max-width: $maxWidth;
     max-height: $maxHeigth;
