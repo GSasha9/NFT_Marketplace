@@ -1,18 +1,6 @@
 .album{
     @include inner;
     flex-direction: column;
-    .album-img{
-        @include getImage(330px, 296px, url(.../../assets/img/albums/hero.jpg));
-    }
-    .album-text{
-        background-color: $background-secondary;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-        padding: 20px;
-        display: flex;
-        gap: 10px;
-        flex-direction: column;
-    }
     &:hover{
         cursor: pointer;
         .album-title{
@@ -22,6 +10,19 @@
         animation-duration: .5s;
         animation-iteration-count: infinite;
     }
+}
+
+.album-img{
+    @include getImage(330px, 296px, url(.../../assets/img/albums/hero.jpg));
+}
+.album-text{
+    background-color: $background-secondary;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
 }
 
 .album-title{
