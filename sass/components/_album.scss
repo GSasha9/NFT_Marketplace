@@ -32,14 +32,15 @@
 .album-text-author{
     display: flex;
     gap: 12px;
-    .author-pic{
-        @include getImage(24px, 24px, url(.../../assets/img/albums/hero.jpg));
-        border-radius: 50%;
-        height: 24px;
-    }
-    .author-name{
-        @include getText(1rem, 1.4rem, 400);
-    }
+}
+
+.author-pic{
+    @include getImage(24px, 24px, url(.../../assets/img/albums/hero.jpg));
+    border-radius: 50%;
+    height: 24px;
+}
+.author-name{
+    @include getText(1rem, 1.4rem, 400);
 }
 
 @keyframes heartbit {
