@@ -1,51 +1,51 @@
 /*! HERO */
 
-.hero__inner{
+.hero__inner {
     flex-direction: row !important;
     gap: 30px;
-    .hero__text{
+    .hero__text {
         @include inner(inherit);
         flex-direction: column;
         width: 49%;
         gap: 30px;
         align-items: flex-start;
     }
-    .hero__album{
+    .hero__album {
         width: 50%;
     }
 }
 
-.hero__text{
-    .hero__text-title{
+.hero__text {
+    .hero__text-title {
         @include inner(inherit);
         flex-direction: column;
         gap: 20px;
-        .title__1{
+        .title__1 {
             @include getText(4.2rem, 4.6rem, 600);
         }
     }
-    .hero__list{
+    .hero__list {
         @include inner;
         gap: 40px;
-        .hero__list-item{
+        .hero__list-item {
             @include inner(150px);
             flex-direction: column;
-            .list-item-number{
+            .list-item-number {
                 @include getTextDecor(1.75rem, 2.45rem);
             }
         }
     }
 }
 
-.text-description{
+.text-description {
     @include getText(1.4rem, 2.2rem, 400);
 }
 
 .hero__album{
-    .hero__album-img{
+    .hero__album-img {
         @include getImage(510px, 401px, url(.../../assets/img/albums/hero.jpg) !important);
     }
-    .animakid{
+    .animakid {
         background-image: url('.../../assets/img/creators/Artist Avatar (5).png');
     }
 }
@@ -55,45 +55,45 @@
 
 /*! COLLECTION */
 
-.collection__inner{
+.collection__inner {
     gap: 3.75rem !important;
-    .collection__title{
+    .collection__title {
         @include inner(inherit);
         flex-direction: column;
         gap: 10px;
     }
 }
 
-.title__3{
+.title__3 {
     @include getText(2.4rem, 2.9rem, 600);
 }
 
-.collection__tables{
+.collection__tables {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 30px;
     width: 100%;
-    .collection__table-item{
+    .collection__table-item {
         height: 525px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr 100px 65px;
         gap: 15px;
-        .table-image{
+        .table-image {
             @include getImage(510px, 401px, url(.../../assets/img/albums/hero.jpg));
             height: 100%;
             width: 100%;
             max-height: 100px;
             border-radius: 20px !important;
         }
-        .table-image:first-of-type{
+        .table-image:first-of-type {
             grid-column: 1 / 4;
             @include getImage(510px, 401px, url(.../../assets/img/albums/hero.jpg));
             height: 100%;
             width: 100%;
             max-height: 330px;
         }
-        .album-text{
+        .album-text {
             grid-column: 1 / 4;
             display: flex;
             flex-direction: column;
@@ -106,32 +106,32 @@
 
 /*! CREATORS */
 
-.creator__inner{
-    .creator__text{
+.creator__inner {
+    .creator__text {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        .creator__text-title{
+        .creator__text-title {
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
-        .creator-button{
+        .creator-button {
             align-self: flex-end;
             background: transparent;
             border: 2px solid $callToAction;
-            &:hover{
+            &:hover {
                 background-color: rgb(26, 26, 26);
             }
         }
     }
 
-    .creator__table{
+    .creator__table {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, 1fr);
         gap: 30px;
-        .creator__table-item{
+        .creator__table-item {
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -141,7 +141,7 @@
             border-radius: 20px;
             max-width: 240px;
             max-height: 238px;
-            .table-item-number{
+            .table-item-number {
                 position: absolute;
                 background-color: $background;
                 border-radius: 50%;
@@ -153,7 +153,7 @@
                 font-family: $decorFont;
                 color: $text-aditional-dark-color;
             }
-            .creator__table-img{
+            .creator__table-img {
                 height: 120px;
                 width: 100%;
                 background-image: url('.../../assets/img/creators/Artist Avatar (1).png');
@@ -165,23 +165,56 @@
     }
 }
 
-.creator__table-description{
+.creator__table-description {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    .creator__table-description-name{
+    .creator__table-description-name {
         grid-column: 1 / 3;
         text-align: center;
     }
-    .creator__table-description-sales{
+    .creator__table-description-sales {
         @include getText(1rem, 1.4rem, 400);
         color: $text-aditional-dark-color;
     }
-    .creator__table-description-amount{
+    .creator__table-description-amount {
         @include getTextDecor(1rem, 1.4rem, 400);
     }
 }
 
-.title__5{
+.title__5 {
     @include getText(1.38rem, 1.92rem, 600);
+}
+
+/*! ------ */
+
+/*! CATEGORY */
+
+.category__table {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.875rem;
+    .category__table-item {
+        @include inner(240px);
+        flex-direction: column;
+        .table-image {
+            @include getImage(240px, 15rem, url(.../../assets/img/category/img/1.png));
+            width: 100%;
+            height: 15rem;
+            .table-image-vector {
+                @include getImage(100%, 100%, url(../../assets/img/category/vectors/PaintBrush.svg));
+                background-size: initial;
+                background-repeat: no-repeat;
+                background-position: center;
+                backdrop-filter: blur(10px);
+            }
+        }
+        .category__table-title {
+            padding: 20px 30px 25px;
+            background-color: $background-secondary;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+    }
 }
