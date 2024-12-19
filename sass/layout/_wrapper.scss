@@ -16,7 +16,7 @@ body{
         padding: 80px 115px;
         .inner{
             @include inner(1050px);
-            gap: 3vw;
+            gap: 4.75vw;
             flex-direction: column;
         }
     }
