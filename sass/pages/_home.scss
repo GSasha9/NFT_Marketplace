@@ -98,6 +98,7 @@
             flex-direction: column;
             gap: 10px;
             padding: 0px;
+            background-color: transparent;
         }
     }
 }
@@ -179,11 +180,11 @@
 }
 
 .amount {
-    @include getTextDecor(1rem, 1.4rem, 400);
+    @include getTextDecor(1rem, 2rem, 400);
 }
 
 .title__5 {
-    @include getText(1.38rem, 1.92rem, 600);
+    @include getText(1.38rem, 2rem, 600);
 }
 
 /*! ------ */
@@ -323,3 +324,47 @@
     }
 }
 
+/*! ------ */
+
+/*! WORKS */
+
+.works__inner {
+    @include inner;
+    flex-direction: column;
+    gap: 4.3vw !important;
+}
+
+.works__cards {
+    @include inner;
+    height: 439px;
+    display: flex;
+    gap: 30px;
+    .works__card {
+        background-color: $background-secondary;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 30px 30px;
+        height: 100%;
+        border-radius: 20px;
+        max-width: 330px;
+        gap: 20px;
+        align-items: center;
+        .works__card-img {
+            max-width: 250px;
+            height: 250px;
+            display: flex;
+            justify-items: center;
+        }
+        .works__card-text {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            .card-text-description {
+                @include getText(1rem, 1.4rem, 400);
+                color: $text-main-color;
+                text-align: center;
+            }
+        }
+    }
+}
